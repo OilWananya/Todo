@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Login from './Pages/Login';
+import setAuthToken from './api/setAuthToken';
 
-function App() {
+const token = localStorage.getItem("token");
+ if (token) {
+    setAuthToken(token);
+ }else{
+    // window.location.href = "/login";
+ }
+
+
+ const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <div className='App'>
+        <Routes>
+           <Route path="/" element={<Login />} />
+        </Routes>
+     </div>
   );
-}
+ };
+
+// function App() {
+//   return (
+//     <div className="App">
+//       {/* <Routes>
+//         <Route path="/login" element={<Login />} />
+//       </Routes> */}
+//     </div>
+//   );
+// }
 
 export default App;
