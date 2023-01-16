@@ -2,6 +2,7 @@ import React  from "react";
 
 const Button = ({ 
     border,
+    type,
     color,
     children,
     height,
@@ -12,12 +13,13 @@ const Button = ({
   return (
     <button 
         onClick={onClick}
+        type={type}
         style={{
-            backgroundColor: color,
-            border,
-            borderRadius: radius,
-            height,
-            width
+          backgroundColor: color,
+          border,
+          borderRadius: radius,
+          height,
+          width
         }}
     >
         {children}

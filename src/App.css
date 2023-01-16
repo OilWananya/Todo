@@ -36,3 +36,57 @@
     transform: rotate(360deg);
   }
 }
+
+.block-view{
+  border-style: solid;
+  width: 100%;
+  border-color: #c9c9c9;
+  padding: 10px;
+}
+.header-list{
+  text-align: left;
+}
+.fw{
+  font-weight: bold;
+}
+.todo-date{
+  text-align: right;
+  font-size: 10px;
+}
+.content{
+  margin: 10px;
+}
+.icon-close{
+  text-align: right;
+}
+.w-modal{
+  width: 70%;
+}
+.ReactModal__Content.ReactModal__Content--after-open{
+  width: 70%;
+}
+.w-100{
+  width: 100%;
+}
+.text-center{
+  text-align: center;
+}
+.login{
+  margin: 35px;
+}
+.h-30{
+  height: 30px;
+}
+.form-group{
+  margin:10px 0;
+}
+.text-label{
+  text-align: left;
+}
+.ft-30{
+  font-size: 30px;
+}
+.model-delete{
+  margin: 20px;
+  text-align: center;
+}

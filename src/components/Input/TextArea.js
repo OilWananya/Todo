@@ -1,11 +1,11 @@
-import React , { useState } from "react";
+import React , { useState }  from "react";
 
-const Input = ({  fieldModel, value, label, name, placeholder, type, onCustomChange , require }) => {
-  const [inputValue, setinputValue] = useState(value);
+const TextArea = ({  fieldModel , value, label, name, placeholder, type, onCustomChange , require , row }) => {
+  const [textAreaVal, settextAreaVal] = useState(value);
   const onChange = (event) => {
     value = event.target.value
     fieldModel.value = value
-    setinputValue(value)
+    settextAreaVal(value)
   }
 
   return (
@@ -13,16 +13,17 @@ const Input = ({  fieldModel, value, label, name, placeholder, type, onCustomCha
     <div>
       {label && <label htmlFor="input-field">{label}</label>}
     </div>
-    <input
+    <textarea
       required={require}
       type={type}
       name={name}
-      value={inputValue}
-      className="form-control w-100 h-30"
+      rows={row}
+      value={textAreaVal}
+      className="form-control w-100"
       placeholder={placeholder}
       onChange={onCustomChange || onChange}
     />
   </div>
 );
 }
-export default Input;
+export default TextArea;
